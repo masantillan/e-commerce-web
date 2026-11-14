@@ -97,9 +97,16 @@ img{
   width: 3rem;
 }
 
-.fichas{
+#fichas {
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 5rem;
+}
 
+.fichas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
