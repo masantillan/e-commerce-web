@@ -1,6 +1,6 @@
 export const fichas = (productos) => {
   const contenedor = document.getElementById("fichas");
-  contenedor.classList.add("fichas")
+  contenedor.classList.add("fichas");
 
   productos.forEach((producto) => {
     //Creo los productos
@@ -18,15 +18,15 @@ export const fichas = (productos) => {
     descripcion.textContent = producto.descripcion;
 
     const precio = document.createElement("p");
-    precio.textContent = producto.precio;
+    precio.textContent = `$${producto.precio}`;
 
     const boton = document.createElement("button");
-    boton.classList.add("button");
+    boton.classList.add("boton");
     boton.textContent = "Agregar al carrito";
 
-    /*  boton.addEventListener("click",()=> {
-            agregarCarrito(producto);
-        }); */
+    boton.addEventListener("click", () => {
+      agregarCarrito(producto);
+    });
 
     //Estructura de fichas
     tarjeta.appendChild(img);
