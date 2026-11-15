@@ -1,0 +1,26 @@
+[
+  {
+    "producto": "Trio Monedas Chinas",
+    "descripcion": "Amuleto",
+    "precio": 2500,
+    "imagen": "img/amuleto-moneda.jpg"
+  },
+  {
+    "producto": "Nudo Monedas Chinas",
+    "descripcion": "Amuleto",
+    "precio": 3000,
+    "imagen": "img/colgante-nudo.jpg"
+  },
+  {
+    "producto": "Leon Chino",
+    "descripcion": "Figura, se mueve con la luz solar",
+    "precio": 15000,
+    "imagen": "img/leon-solar.jpg"
+  },
+  {
+    "producto": "Maneki Neko",
+    "descripcion": "Figura",
+    "precio": 15000,
+    "imagen": "img/maneki.jpg"
+  }
+]
