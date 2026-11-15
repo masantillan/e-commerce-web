@@ -3,7 +3,7 @@ import { showCart } from "./storage.js";
 import { actCont } from "./ui.js";
 
 //Busco el JSON y muestro las fichas de productos
-fetch("../data/productos.json")
+fetch("./data/productos.json")
   .then((response) => response.json())
   .then((productos) => {
     fichas(productos);
