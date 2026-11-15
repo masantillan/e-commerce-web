@@ -60,7 +60,7 @@ const renderCart = () => {
 const btnVaciar = document.getElementById("vaciarCarrito");
 
 btnVaciar.addEventListener("click", () => {
-  vaciarCarrito();
+  dumpCart();
   renderCart();
 });
 
