@@ -1,6 +1,7 @@
+import { addToCart } from "./funcCarrito.js";
+
 export const fichas = (productos) => {
   const contenedor = document.getElementById("fichas");
-  contenedor.classList.add("fichas");
 
   productos.forEach((producto) => {
     //Creo los productos
@@ -25,7 +26,7 @@ export const fichas = (productos) => {
     boton.textContent = "Agregar al carrito";
 
     boton.addEventListener("click", () => {
-      agregarCarrito(producto);
+      addToCart(producto);
     });
 
     //Estructura de fichas

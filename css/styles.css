@@ -110,3 +110,42 @@ img{
   flex-direction: column;
   gap: 0.3rem;
 }
+
+.prodCarrito {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.prodCarrito img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.prodCarrito h3,
+.prodCarrito p {
+    margin: 5px 0;
+}
+
+.prodCarrito button {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.descCarrito {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descCarrito h3,
+.descCarrito p {
+    margin: 0;
+}
