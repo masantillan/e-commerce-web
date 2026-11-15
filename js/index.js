@@ -14,5 +14,4 @@ fetch("../data/productos.json")
 document.addEventListener("DOMContentLoaded", () => {
   const carrito = showCart();
   actCont(carrito);
-  fichas();
 });
