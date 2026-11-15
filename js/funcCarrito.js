@@ -44,3 +44,9 @@ export const dumpCart = () => {
   actCont([]);
   msj("Carrito vacio");
 };
+
+export const calcTot = (carrito) => {
+  return carrito.reduce((total, producto) => {
+    return total + producto.precio * (producto.cantidad || 1);
+  }, 0);
+};

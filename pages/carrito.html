@@ -19,7 +19,9 @@
         <ul class="nav-head">
           <li><a href="../index.html">Inicio</a></li>
           <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="./carrito.html">🛒<span id="contador-carrito"></span></a></li>
+          <li>
+            <a href="./carrito.html">🛒<span id="contador-carrito"></span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,13 +33,16 @@
         quidem quaerat molestiae eos maiores. Quibusdam cupiditate eos nemo
         earum.
       </p>
-      <section>
-        <div id="cart-action"></div>
-      </section>
+
       <section>
         <h2>Carrito</h2>
-        <div id="prodCarrito">
-
+        <div id="prodCarrito"></div>
+      </section>
+      <section>
+        <div id="cart-action">
+          <p id="totalCompra"></p>
+          <button id="vaciarCarrito" class="btn-vaciar">Vaciar carrito</button>
+          <button id="finalizarCompra" class="btn-finalizar">Finalizar compra</button>
         </div>
       </section>
     </main>

@@ -1,3 +1,8 @@
+
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,25 +16,34 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
-  background-color: #698e8c;
   color: antiquewhite;
+  background-color: #698e8c;
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+
+/* ========================================
+   ESTRUCTURA PRINCIPAL
+======================================== */
+
 main {
   width: 80%;
   margin: auto;
   padding-bottom: 2rem;
-
   flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
 
 h1 {
   font-size: 3rem;
@@ -46,13 +60,10 @@ h2 {
   margin: 3rem 0;
 }
 
-.boton {
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 1rem;
-  border-radius: 1.3rem;
-}
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+======================================== */
 
 header,
 footer {
@@ -65,37 +76,52 @@ footer {
   align-items: center;
 }
 
+.logo,
+.nav-head ul li a {
+  display: inline-block;
+  padding: 2rem;
+  color: inherit;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.nav-head {
+  display: flex;
+  list-style: none;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
 footer {
   padding: 1rem 4rem;
 }
 
-.logo,
-.nav-head ul li a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: inherit;
-  display: inline-block;
-  padding: 2rem;
-}
-
-.nav-head{
-  list-style: none;
+.logos-foot {
   display: flex;
+  gap: 3rem;
+  list-style: none;
 }
 
-img{
+.img-foot {
+  width: 3rem;
+}
+
+
+/* ========================================
+   IMÁGENES GENERALES
+======================================== */
+
+img {
   width: 30rem;
 }
 
-.logos-foot{
-  list-style: none;
-  display: flex;
-  gap: 3rem;
-}
 
-.img-foot{
-  width: 3rem;
-}
+/* ========================================
+   FICHAS DEL CATÁLOGO
+======================================== */
 
 #fichas {
   display: flex;
@@ -111,41 +137,131 @@ img{
   gap: 0.3rem;
 }
 
+
+/* ========================================
+   ESTILO COMPARTIDO DE LAS FICHAS
+======================================== */
+
+.fichas-bg {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+
+/* ========================================
+   FICHAS DEL CARRITO
+======================================== */
+
 .prodCarrito {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    gap: 20px;
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
 }
 
 .prodCarrito img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .prodCarrito h3,
 .prodCarrito p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .prodCarrito button {
-    margin-left: auto;
-    flex-shrink: 0;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
+
+/* ========================================
+   DESCRIPCIÓN DE PRODUCTOS DEL CARRITO
+======================================== */
+
 .descCarrito {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .descCarrito h3,
 .descCarrito p {
-    margin: 0;
+  margin: 0;
+}
+
+
+/* ========================================
+   ACCIONES DEL CARRITO Y TOTAL
+======================================== */
+
+#cart-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#totalCompra {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+/* ========================================
+   BOTONES GENERALES
+======================================== */
+
+.boton {
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1.3rem;
+}
+
+
+/* ========================================
+   BOTONES DE ACCIÓN DEL CARRITO
+======================================== */
+
+.btn-vaciar,
+.btn-finalizar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Botón para vaciar el carrito */
+
+.btn-vaciar {
+  background-color: #9f3030;
+  color: white;
+}
+
+.btn-vaciar:hover {
+  background-color: #782323;
+}
+
+/* Botón para finalizar la compra */
+
+.btn-finalizar {
+  background-color: #238653;
+  color: white;
+}
+
+.btn-finalizar:hover {
+  background-color: #17663e;
 }

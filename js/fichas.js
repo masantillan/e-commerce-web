@@ -6,7 +6,7 @@ export const fichas = (productos) => {
   productos.forEach((producto) => {
     //Creo los productos
     const tarjeta = document.createElement("article");
-    tarjeta.classList.add("fichas");
+    tarjeta.classList.add("fichas", "fichas-bg");
 
     const img = document.createElement("img");
     img.src = `./${producto.imagen}`;

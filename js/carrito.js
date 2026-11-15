@@ -1,21 +1,21 @@
 import { showCart } from "./storage.js";
 import { actCont } from "./ui.js";
-import { delProd } from "./funcCarrito.js";
+import { delProd, calcTot } from "./funcCarrito.js";
 
 const renderCart = () => {
   const carrito = showCart();
   actCont(carrito);
+  const total = document.getElementById("totalCompra");
+  total.textContent = `Total: $${calcTot(carrito)}`;
 
   const contenedor = document.getElementById("prodCarrito");
-  const actButtons = document.getElementById("cart-action");
 
   contenedor.innerHTML = "";
-  actButtons.innerHTML = "";
 
   carrito.forEach((producto, indice) => {
     // Creo los productos
     const tarjeta = document.createElement("article");
-    tarjeta.classList.add("prodCarrito");
+    tarjeta.classList.add("prodCarrito", "fichas-bg");
 
     const info = document.createElement("div");
     info.classList.add("descCarrito");
@@ -25,7 +25,8 @@ const renderCart = () => {
     img.alt = producto.producto;
 
     const titulo = document.createElement("h3");
-    titulo.textContent = `${producto.cantidad} x ${producto.producto}`;
+    const cantidad = producto.cantidad || 1;
+    titulo.textContent = `${cantidad} x ${producto.producto}`;
 
     const descripcion = document.createElement("p");
     descripcion.textContent = producto.descripcion;
@@ -54,6 +55,29 @@ const renderCart = () => {
 
     contenedor.appendChild(tarjeta);
   });
+};
+
+const btnVaciar = document.getElementById("vaciarCarrito");
+
+btnVaciar.addEventListener("click", () => {
+  vaciarCarrito();
+  renderCart();
+});
+
+const finalizarCompra = async () => {
+  try {
+    const respuesta = await fetch("/checkout", {
+      method: "POST"
+    });
+
+    if (!respuesta.ok) {
+      throw new Error("Error al finalizar la compra");
+    }
+
+    msj("Compra finalizada");
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 renderCart();
