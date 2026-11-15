@@ -1,6 +1,6 @@
 import { showCart } from "./storage.js";
 import { actCont } from "./ui.js";
-import { delProd, calcTot } from "./funcCarrito.js";
+import { delProd, calcTot, dumpCart} from "./funcCarrito.js";
 
 const renderCart = () => {
   const carrito = showCart();
